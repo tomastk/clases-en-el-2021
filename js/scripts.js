@@ -6,7 +6,7 @@ function getDays(date) {
   const dateMiliseconds = date.getTime();
   const MilisecondsAtDay = 1000*60*60*24;
   const diffMiliseconds = dateMiliseconds - now;
-  const diffDays = Math.round(diffMiliseconds / MilisecondsAtDay);
+  const diffDays = Math.ceil(diffMiliseconds / MilisecondsAtDay)
   if (diffDays >= 0) {
     return diffDays + ' dias'
   } else {
